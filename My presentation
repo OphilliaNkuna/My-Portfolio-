@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI/ML Portfolio Presentation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #1a1a1a;
+      font-family: 'Poppins', sans-serif;
+    }
+    canvas {
+      display: block;
+      margin: auto;
+      background-color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="slideCanvas" width="1000" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById("slideCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const slides = [
+      {
+        title: "✨ Welcome to My Portfolio!",
+        review: "Let's dive into the exciting world of AI and machine learning together!",
+        content: "I'm Ophillia Nkuna\nExplore my journey into AI & ML.",
+        bg: "#0d0d0d",
+        titleColor: "#ffcc00",
+        textColor: "#ffffff",
+        customFontSize: 58,
+        contentFontSize: 20,
+        reviewFontSize: 18,
+        reviewColor: "#cccc33"
+      },
+      {
+        title: " 1. Personal Introduction",
+        review: "My background combines tech support with a passion for AI innovation.",
+        content: "Name: Ophillia Nkuna, born in Limpopo\nNow based in Soweto, Gauteng\nSystem Support at Ikusasa Technology\nAI Intern at Capaciti\nPassionate about AI, coding, and ethical innovation",
+        bg: "#003366",
+        titleColor: "#00ffff",
+        textColor: "#ffffff",
+        contentFontSize: 20,
+        reviewFontSize: 18,
+        reviewColor: "#99e6ff"
+      },
+      {
+        title: " 2. Technical Background",
+        review: "I have developed a diverse technical skill set essential for AI projects.",
+        content: "Languages: Python, HTML, CSS, JavaScript\nGenerative AI tools: OpenAI API, Make.com, Glide\nUI Tools: Streamlit, Canva\nVersion Control: GitHub\nCourses: AI/ML Bootcamp – Capaciti",
+        bg: "#002b36",
+        titleColor: "#00ffcc",
+        textColor: "#ffffff",
+        contentFontSize: 20,
+        reviewFontSize: 18,
+        reviewColor: "#66ffcc"
+      },
+      {
+        title: " Sentiment Analysis Dashboard",
+        review: "This dashboard turns complex text data into clear, actionable insights. It shows all your reviews if they are positive, negative, or neutral.",
+        content: "• Built with NLP techniques and Plotly visualizations\n• Multi-class sentiment classification\n• Interactive dashboard to explore text data insights\n• Supports export of analysis reports",
+        bg: "#1a1a1a",
+        titleColor: "#ff69b4",
+        textColor: "#f0f0f0",
+        contentFontSize: 20,
+        reviewFontSize: 18,
+        reviewColor: "#ff99cc"
+      },
+      {
+        title: " 4.  Fraud Detection Assistant ",
+        review: "This assistant strengthens security by proactively identifying potential fraud early.",
+        content: "• AI-powered fraud detection using NLP\n• Analyzes transaction data for anomalies\n• Provides real-time alerts and insights\n• Enhances financial security and trust",
+        bg: "#2e003e",
+        titleColor: "#f1c40f",
+        textColor: "#ffffff",
+        contentFontSize: 20,
+        reviewFontSize: 18,
+        reviewColor: "#ffe066"
+      },
+      {
+        title: " 5. Future Growth Plans",
+        review: "I am committed to continual learning and creating positive AI impact.",
+        content: "Deepen ML/NLP specialization\nExplore AI for healthcare and education\nLearn full-stack deployment (Flask/React + ML Ops)\nFocus on building ethical and inclusive AI solutions",
+        bg: "#003300",
+        titleColor: "#99ff99",
+        textColor: "#ffffff",
+        contentFontSize: 20,
+        reviewFontSize: 18,
+        reviewColor: "#ccffcc"
+      },
+      {
+        title: "🙏 Thank You!",
+        review: "Thank you for your time and interest in my AI journey!",
+        content: "Let’s build the future together\n ophillian@gmail.com\n github.com/OphilliaNkuna",
+        bg: "#000000",
+        titleColor: "#ffcc00",
+        textColor: "#ffffff",
+        contentFontSize: 20 ,
+        reviewFontSize: 18,
+        reviewColor: "#ffcc00"
+      }
+    ];
+
+    let currentSlide = 0;
+
+    function drawSlide(index) {
+      const slide = slides[index];
+      ctx.fillStyle = slide.bg;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Title
+      ctx.fillStyle = slide.titleColor;
+      ctx.font = `bold ${slide.customFontSize || 48}px Poppins, Arial`;
+      ctx.textAlign = "center";
+      ctx.fillText(slide.title, canvas.width / 2, 80);
+
+      // Review (more space below the title)
+      if (slide.review) {
+        ctx.fillStyle = slide.reviewColor || "#cccccc";
+        ctx.font = `italic ${slide.reviewFontSize || 18}px Poppins, Arial`;
+        ctx.textAlign = "center";
+        ctx.fillText(slide.review, canvas.width / 2, 160);
+      }
+
+      // Content (more space below the review)
+      ctx.fillStyle = slide.textColor;
+      ctx.font = `${slide.contentFontSize || 18}px Poppins, Arial`;
+      ctx.textAlign = "left";
+      const contentLines = slide.content.split("\n");
+      const startY = 230;  // increased from 210 to 230 for more space
+      contentLines.forEach((line, i) => {
+        ctx.fillText(line, 80, startY + i * 28);
+      });
+    }
+
+    drawSlide(currentSlide);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") {
+        currentSlide = (currentSlide + 1) % slides.length;
+        drawSlide(currentSlide);
+      } else if (e.key === "ArrowLeft") {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        drawSlide(currentSlide);
+      }
+    });
+  </script>
+</body>
+</html>
 
