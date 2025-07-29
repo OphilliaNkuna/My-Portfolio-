@@ -1,155 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>AI/ML Portfolio Presentation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background-color: #1a1a1a;
-      font-family: 'Poppins', sans-serif;
-    }
-    canvas {
-      display: block;
-      margin: auto;
-      background-color: #1a1a1a;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ophillia Nkuna · AI/ML Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
+
 <body>
-  <canvas id="slideCanvas" width="1000" height="600"></canvas>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Ophillia's Portfolio</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
+  <header class="header-text">
+    <h1>Hi, I'm Ophillia Nkuna</h1>
+    <p class="tagline">Artificial Intelligence/System Support</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="section-title gradient-text">About Me</h2>
+    <p>I am Ophillia Nkuna, an aspiring AI/ML Developer passionate about solving real-world problems using intelligent systems.</p>
+    <p>I'm passionate about responsible AI development, fairness in machine learning, and creating accessible tools that benefit everyone.</p>
+    <p>I thrive in collaborative environments, enjoy problem-solving, and continuously seek to grow my technical and soft skills.</p>
+  </section>
+  <div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+    <p class="tab-links" onclick="opentab('education')">Education</p>
+  </div>
+  <div class="tab-contents active-tab" id="skills">
+    <ul>
+      <li><span>IT Technician</span><br />hardware/software setup, network support, maintenance, troubleshooting, and customer assistance.</li>
+      <li><span>AI Candidate</span><br />Python, HTML, CSS, Microsoft Power Agent, Voiceflow and no-code like glide.</li>
+    </ul>
+  </div>
+  <div class="tab-contents" id="experience">
+    <ul>
+      <li><span>April 2025 - Present</span><br/>AI Intern at Capaciti.</li>
+      <li><span>june 2023 - May 2024</span><br/>IT System Support at Ikusasa Technology Solutions.</li>
+      <li><span>November 2024 - January 2025</span><br />Polo E-commerce at Malboro.</li>
+    </ul>
+  </div>
+  <div class="tab-contents" id="education">
+    <ul>
+      <li><span>2023 - 2024</span><br />National Senior Certificate(NQF Level 5) at Ikusasa Technology Solutions.</li>
+      <li><span>2009 - 2014</span><br />National Senior Certificate at Gija-Ngove High School.</li>
+      <li><span>2015 - 2016</span><br />Civil Engineering N3 at Capricorn College.</li>
+    </ul>
+  </div>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 class="section-title gradient-text">Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>AI Chatbot Assistant</h3>
+        <p>A conversational assistant powered by natural language processing (NLP).</p>
+        <a href="https://copilotstudio.microsoft.com/environments/Default-a3f14f21-237f-4028-b978-425eb768a716/bots/crac2_agent1/canvas?__version__=2&enableFileAttachment=true" target="_blank">View Project</a>
+      </article>
+      <article class="project-card">
+        <h3>Resume Builder</h3>
+        <p>An AI-powered no-code resume builder that helps users create customized, ATS-friendly resumes quickly and easily.</p>
+        <a href="https://generated-resume2-shl9.vercel.app/" target="_blank">View Project</a>
+      </article>
+      <article class="project-card">
+        <h3>AI Fraud Detection System</h3>
+        <p>A machine learning-powered system designed to detect and prevent fraud.</p>
+        <a href="https://melida23-fraud-detection-system-app2-nlnt0q.streamlit.app/" target="_blank">View Project</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <h2 class="section-title gradient-text">Certificates</h2>
+    <div class="certificates-grid">
+      <div class="certificate-card">
+        <h3>Developing Interpersonal Skills</h3>
+        <a href="https://www.coursera.org/account/accomplishments/verify/86DFTXI23WNM" target="_blank">View Certificate</a>
+      </div>
+      <div class="certificate-card">
+        <h3>AI Foundation and Python Development</h3>
+        <a href="https://www.coursera.org/learn/python-for-applied-data-science-ai/home/module/1" target="_blank">View Certificate</a>
+      </div>
+      <div class="certificate-card">
+        <h3>Artificial Intelligence Badges for Bootcamping Responsible AI</h3>
+        <a href="https://www.coursera.org/account/accomplishments/badge/ab24gM38QpK9uIDN_OKSPQ" target="_blank">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capstone Showcase -->
+  <section id="capstone">
+    <h2 class="section-title gradient-text">Capstone Project Showcase</h2>
+    <h3>Sentiment Analysis Dashboard</h3>
+    <p>This interactive AI dashboard analyzes and visualizes public sentiment using natural language processing and machine learning models.</p>
+    <a href="https://sentimental-7lazj7jmarilhqx5qrpx7c.streamlit.app/" target="_blank" class="live-demo-btn">🌐 View Live Demo</a>
+  </section>
+
+  <section id="voiceflow" class="capstone-style">
+    <h2 class="section-title gradient-text">Voiceflow Health Assistant</h2>
+    <p>A no-code AI-powered assistant created using Voiceflow to help users with general health-related queries.</p>
+    <a href="https://creator.voiceflow.com/prototype/68273c270e5b7d1dbaa4b959" target="_blank" class="live-demo-btn">Launch Assistant</a>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact">
+  <h2 class="section-title gradient-text">Contact</h2>
+  <div class="contact-icons">
+    <a href="mailto:ophilliankuna@gmail.com" title="Personal Email" target="_blank">
+      <i class="fas fa-envelope"></i>
+    </a>
+    <a href="mailto:ophiillia.nkuna@capaciti.org.za" title="Work Email" target="_blank">
+      <i class="fas fa-briefcase"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/ophillia-nkuna-7ab09b22b" title="LinkedIn" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/OphilliaNkuna/OphilliaNkuna.github.io" title="GitHub" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+</section>
+
+    </p>
+  </div>
+</section>
+
+    </div>
+  </section>
+
+  <!-- CV Section -->
+  <section id="cv">
+    <div class="cv-buttons">
+      <a href="Ophillia Nkuna CV Capaciti .pdf" target="_blank" class="btn view-btn">View CV</a>
+      <a href="Ophillia Nkuna CV Capaciti .pdf" download class="btn download-btn">Download CV</a>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <h1 class="section-title autoDisplay"><span class="gradient-text">Let's talk ☺</span></h1>
+    <div class="contact-container">
+      <div class="contact-box autoBlur">
+        <form id="contactForm" class="contact-form">
+          <input type="hidden" name="access_key" value="ad0f7440-5457-4693-9a49-8806d2c2e9bd">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" class="input-message" placeholder="Share your thoughts" required></textarea>
+          </div>
+          <div id="formStatus" style="margin-bottom: 15px; color: #72a1de;"></div>
+          <div class="contact-footer">
+            <div class="social-box">
+              <a href="https://www.linkedin.com/in/ophillia-nkuna-7ab09b22b"><i class='bx bxl-linkedin-square'></i></a>
+              <a href="mailto:ophilliankuna@gmail.com"><i class='bx bxs-envelope'></i></a>
+              <a href="https://github.com/OphilliaNkuna/OphilliaNkuna.github.io"><i class='bx bxl-github'></i></a>
+            </div>
+            <button type="submit" class="btn"><i class='bx bx-send'></i>Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Nav Toggle Script -->
   <script>
-    const canvas = document.getElementById("slideCanvas");
-    const ctx = canvas.getContext("2d");
-
-    const slides = [
-      {
-        title: "✨ Welcome to My Portfolio!",
-        review: "Let's dive into the exciting world of AI and machine learning together!",
-        content: "I'm Ophillia Nkuna\nExplore my journey into AI & ML.",
-        bg: "#0d0d0d",
-        titleColor: "#ffcc00",
-        textColor: "#ffffff",
-        customFontSize: 58,
-        contentFontSize: 20,
-        reviewFontSize: 18,
-        reviewColor: "#cccc33"
-      },
-      {
-        title: " 1. Personal Introduction",
-        review: "My background combines tech support with a passion for AI innovation.",
-        content: "Name: Ophillia Nkuna, born in Limpopo\nNow based in Soweto, Gauteng\nSystem Support at Ikusasa Technology\nAI Intern at Capaciti\nPassionate about AI, coding, and ethical innovation",
-        bg: "#003366",
-        titleColor: "#00ffff",
-        textColor: "#ffffff",
-        contentFontSize: 20,
-        reviewFontSize: 18,
-        reviewColor: "#99e6ff"
-      },
-      {
-        title: " 2. Technical Background",
-        review: "I have developed a diverse technical skill set essential for AI projects.",
-        content: "Languages: Python, HTML, CSS, JavaScript\nGenerative AI tools: OpenAI API, Make.com, Glide\nUI Tools: Streamlit, Canva\nVersion Control: GitHub\nCourses: AI/ML Bootcamp – Capaciti",
-        bg: "#002b36",
-        titleColor: "#00ffcc",
-        textColor: "#ffffff",
-        contentFontSize: 20,
-        reviewFontSize: 18,
-        reviewColor: "#66ffcc"
-      },
-      {
-        title: " Sentiment Analysis Dashboard",
-        review: "This dashboard turns complex text data into clear, actionable insights. It shows all your reviews if they are positive, negative, or neutral.",
-        content: "• Built with NLP techniques and Plotly visualizations\n• Multi-class sentiment classification\n• Interactive dashboard to explore text data insights\n• Supports export of analysis reports",
-        bg: "#1a1a1a",
-        titleColor: "#ff69b4",
-        textColor: "#f0f0f0",
-        contentFontSize: 20,
-        reviewFontSize: 18,
-        reviewColor: "#ff99cc"
-      },
-      {
-        title: " 4.  Fraud Detection Assistant ",
-        review: "This assistant strengthens security by proactively identifying potential fraud early.",
-        content: "• AI-powered fraud detection using NLP\n• Analyzes transaction data for anomalies\n• Provides real-time alerts and insights\n• Enhances financial security and trust",
-        bg: "#2e003e",
-        titleColor: "#f1c40f",
-        textColor: "#ffffff",
-        contentFontSize: 20,
-        reviewFontSize: 18,
-        reviewColor: "#ffe066"
-      },
-      {
-        title: " 5. Future Growth Plans",
-        review: "I am committed to continual learning and creating positive AI impact.",
-        content: "Deepen ML/NLP specialization\nExplore AI for healthcare and education\nLearn full-stack deployment (Flask/React + ML Ops)\nFocus on building ethical and inclusive AI solutions",
-        bg: "#003300",
-        titleColor: "#99ff99",
-        textColor: "#ffffff",
-        contentFontSize: 20,
-        reviewFontSize: 18,
-        reviewColor: "#ccffcc"
-      },
-      {
-        title: "🙏 Thank You!",
-        review: "Thank you for your time and interest in my AI journey!",
-        content: "Let’s build the future together\n ophillian@gmail.com\n github.com/OphilliaNkuna",
-        bg: "#000000",
-        titleColor: "#ffcc00",
-        textColor: "#ffffff",
-        contentFontSize: 20 ,
-        reviewFontSize: 18,
-        reviewColor: "#ffcc00"
-      }
-    ];
-
-    let currentSlide = 0;
-
-    function drawSlide(index) {
-      const slide = slides[index];
-      ctx.fillStyle = slide.bg;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Title
-      ctx.fillStyle = slide.titleColor;
-      ctx.font = `bold ${slide.customFontSize || 48}px Poppins, Arial`;
-      ctx.textAlign = "center";
-      ctx.fillText(slide.title, canvas.width / 2, 80);
-
-      // Review (more space below the title)
-      if (slide.review) {
-        ctx.fillStyle = slide.reviewColor || "#cccccc";
-        ctx.font = `italic ${slide.reviewFontSize || 18}px Poppins, Arial`;
-        ctx.textAlign = "center";
-        ctx.fillText(slide.review, canvas.width / 2, 160);
-      }
-
-      // Content (more space below the review)
-      ctx.fillStyle = slide.textColor;
-      ctx.font = `${slide.contentFontSize || 18}px Poppins, Arial`;
-      ctx.textAlign = "left";
-      const contentLines = slide.content.split("\n");
-      const startY = 230;  // increased from 210 to 230 for more space
-      contentLines.forEach((line, i) => {
-        ctx.fillText(line, 80, startY + i * 28);
-      });
-    }
-
-    drawSlide(currentSlide);
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowRight") {
-        currentSlide = (currentSlide + 1) % slides.length;
-        drawSlide(currentSlide);
-      } else if (e.key === "ArrowLeft") {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        drawSlide(currentSlide);
-      }
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
     });
   </script>
+
+  <!-- Tab Toggle Script -->
+  <script>
+    function opentab(tabname) {
+      let tablinks = document.getElementsByClassName("tab-links");
+      let tabcontents = document.getElementsByClassName("tab-contents");
+
+      for (let tab of tablinks) {
+        tab.classList.remove("active-link");
+      }
+      for (let content of tabcontents) {
+        content.classList.remove("active-tab");
+      }
+
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
 </body>
 </html>
-
