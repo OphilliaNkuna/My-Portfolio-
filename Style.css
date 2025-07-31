@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #000000;
+  background-color: #0a2f44;
   color: #ffffff;
   text-align: center;
   line-height: 1.6;
@@ -109,12 +109,12 @@ ul li {
 
 /* Cards */
 .project-card,
-.certificate-card {
-  background: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
+color: #00ffff; /* Bright cyan to stand out */
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover,
